@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Heman's Blog</title>
+        <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='assets/favicon.ico')}}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{{url_for('static',filename='css/styles.css')}}" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="{{url_for('main_page')}}">Hemanth Pulicharla</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('main_page')}}">Home🏠</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('about_me')}}">About👀</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('contact_me')}}">Contact🤝</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#">Admin😾</a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url(../static/Blog_Images/{{postdata.file}})">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h1>{{postdata.head}}</h1>
+                            <h2 class="subheading">{{postdata.headtag}}</h2>
+                            <span class="meta">
+                                Posted by
+                                <a href="#!">Hemanth⚡</a>
+                                on {{postdata.Timestamp}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <p style="max-width:row gx-4 gx-lg-5 justify-content-center;word-wrap:break-word;">{{postdata.Para1}}</p>
+                        <p>{{postdata.Para2}}</p>
+                        <p>{{postdata.Para3}}</p>
+                        <h2 class="section-heading">{{postdata.Sideheads}}</h2>
+                        <p>{{postdata.Para4}}</p>
+                        <p>{{postdata.Para5}}</p>
+                        <p>{{postdata.Para6}}</p>
+                        <a href="#!"><img class="img-fluid" src="../static/Blog_Images/{{postdata.file}}"alt="..." /></a>
+                        <span class="caption text-muted">{{postdata.filedescription}}</span>
+                        <p>{{postdata.Para7}}</p>
+                        <p>{{postdata.Para8}}</p>
+                        <blockquote class="blockquote">{{postdata.quote}}</blockquote>
+                         <br>
+                         <p>
+                            Related links
+                            <a href=http://{{postdata.links}} target="_blank">{{postdata.links}}</a>
+                        </p>
+                      <button type="button" class="btn btn-block">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-through-heart" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.854 15.854A.5.5 0 0 1 2 15.5V14H.5a.5.5 0 0 1-.354-.854l1.5-1.5A.5.5 0 0 1 2 11.5h1.793l.53-.53c-.771-.802-1.328-1.58-1.704-2.32-.798-1.575-.775-2.996-.213-4.092C3.426 2.565 6.18 1.809 8 3.233c1.25-.98 2.944-.928 4.212-.152L13.292 2 12.147.854A.5.5 0 0 1 12.5 0h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.854.354L14 2.707l-1.006 1.006c.236.248.44.531.6.845.562 1.096.585 2.517-.213 4.092-.793 1.563-2.395 3.288-5.105 5.08L8 13.912l-.276-.182a21.86 21.86 0 0 1-2.685-2.062l-.539.54V14a.5.5 0 0 1-.146.354l-1.5 1.5Zm2.893-4.894A20.419 20.419 0 0 0 8 12.71c2.456-1.666 3.827-3.207 4.489-4.512.679-1.34.607-2.42.215-3.185-.817-1.595-3.087-2.054-4.346-.761L8 4.62l-.358-.368c-1.259-1.293-3.53-.834-4.346.761-.392.766-.464 1.845.215 3.185.323.636.815 1.33 1.519 2.065l1.866-1.867a.5.5 0 1 1 .708.708L5.747 10.96Z"></path>
+</svg>
+                  <span class="visually-hidden">Button</span>
+                </button>
+
+
+                        <br>
+                        <hr size="8">
+                        <br>
+                        <h3 style="color: #00ace6;">Comment on this below</h3>
+                        <br>
+                         <form id="contactForm" action="{{url_for('messagesubmit')}}" enctype='multipart/form-data' method='post'>
+                                <div class="form-floating">
+                                    <input class="form-control" id="name" type="text" placeholder="Enter your name..." name="name" required />
+                                    <label for="name">Name</label>
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" id="email" type="email" placeholder="Enter your email..." name="email" required/>
+                                    <label for="email">Email address</label>
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" id="phone" type="tel" placeholder="Enter your phone number..." name="phonenumber" />
+                                    <label for="phone">Phone Number</label>
+                                </div>
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="message" placeholder="Enter your message here..." style="height: 12rem" name="message" required></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                                <br />
+                                <a href="{{url_for('messagesubmit')}}">
+                                <button class="btn btn-primary" id="submitButton" type="submit">
+                                Send</button>
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; Hemanth✨ 2021</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{{url_for('static',filename='js/scripts.js')}}"></script>
+    </body>
+</html>

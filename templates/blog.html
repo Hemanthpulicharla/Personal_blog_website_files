@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blog data</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="{{url_for('static',filename='ContactFrom_v17/images/icons/favicon.ico')}}"/>
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='ContactFrom_v17/vendor/bootstrap/css/bootstrap.min.css')}}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='ContactFrom_v17/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='ContactFrom_v17/fonts/Linearicons-Free-v1.0.0/icon-font.min.css')}}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='ContactFrom_v17/vendor/animate/animate.css')}}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='ContactFrom_v17/vendor/css-hamburgers/hamburgers.min.css')}}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='ContactFrom_v17/vendor/animsition/css/animsition.min.css')}}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='ContactFrom_v17/vendor/select2/select2.min.css')}}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='ContactFrom_v17/vendor/daterangepicker/daterangepicker.css')}}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='ContactFrom_v17/css/util.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='ContactFrom_v17/css/main.css')}}">
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+    <div class="container-contact100">
+        <div class="wrap-contact100">
+            <form class="contact100-form validate-form" method='post'  enctype=multipart/form-data action="{{url_for('postsubmit',id=id)}}">
+                <span class="contact100-form-title">
+                    Blog data
+                </span>
+
+                 <span>
+        {% with messages=get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <strong style="color: orange; padding-left: 50px;font-size: 17pt;font-family: cursive;margin-top: 0px;align-content: center;">{{ message }}</strong>
+        {% endfor %}
+        {% endif %}
+
+        {% endwith %}</span>
+
+                <label class="label-input100" for="first-name">Head of Blog *</label>
+                <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
+                    <input id="first-name" class="input100" type="text" name="Mainhead" placeholder="Main Head">
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Head tag">
+                    <input class="input100" type="text" name="Headtag" placeholder="Head tag">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <label class="label-input100" for="Image">Insert Image *</label>
+                <div class="wrap-input100 validate-input" data-validate = "Valid file is needed">
+                    <input id="email" class="input100" type="file" name="file" placeholder="Eg. 123.jpg">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <label class="label-input100" for="description">imagedescription</label>
+                <div class="wrap-input100 validate-input" data-validate="Valid data for the image">
+                    <input id="phone" class="input100" type="text" name="imagedescription" placeholder="Eg. This contains">
+                    <span class="focus-input100"></span>
+                </div>
+                <label class="label-input100" for="phone">Sidehead</label>
+                <div class="wrap-input100 validate-input" data-validate="Valid side heads for the data">
+                    <input id="phone" class="input100" type="text" name="Sidehead" placeholder="Eg. Enthusia">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <label class="label-input100" for="phone">Quotation</label>
+                <div class="wrap-input100 validate-input" data-validate="Valid quotation is indeed needed ">
+                    <input id="phone" class="input100" type="text" name="quotation" placeholder="Quote at the heart">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <label class="label-input100" for="phone">Links</label>
+                <div class="wrap-input100 validate-input" data-validate="Valid links please! ">
+                    <input id="phone" class="input100" type="text" name="links" placeholder="Links to share">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <label class="label-input100" for="message">Para1 *</label>
+                <div class="wrap-input100">
+                    <textarea id="message" class="input100" name="Para1" placeholder="Write the blog"></textarea>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <label class="label-input100" for="message">Para2</label>
+                <div class="wrap-input100">
+                    <textarea id="message" class="input100" name="Para2" placeholder="Write the blog"></textarea>
+                    <span class="focus-input100"></span>
+                </div>
+                <label class="label-input100" for="message">Para3</label>
+                <div class="wrap-input100">
+                    <textarea id="message" class="input100" name="Para3" placeholder="Write the blog"></textarea>
+                    <span class="focus-input100"></span>
+                </div>
+                <label class="label-input100" for="message">Para4</label>
+                <div class="wrap-input100">
+                    <textarea id="message" class="input100" name="Para4" placeholder="Write the blog"></textarea>
+                    <span class="focus-input100"></span>
+                </div>
+                <label class="label-input100" for="message">Para5</label>
+                <div class="wrap-input100">
+                    <textarea id="message" class="input100" name="Para5" placeholder="Write the blog"></textarea>
+                    <span class="focus-input100"></span>
+                </div>
+                <label class="label-input100" for="message">Para6</label>
+                <div class="wrap-input100 ">
+                    <textarea id="message" class="input100" name="Para6" placeholder="Write the blog"></textarea>
+                    <span class="focus-input100"></span>
+                </div>
+                <label class="label-input100" for="message">Para7</label>
+                <div class="wrap-input100 ">
+                    <textarea id="message" class="input100" name="Para7" placeholder="Write the blog"></textarea>
+                    <span class="focus-input100"></span>
+                </div>
+                <label class="label-input100" for="message">Para8</label>
+                <div class="wrap-input100">
+                    <textarea id="message" class="input100" name="Para8" placeholder="Write the blog"></textarea>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="container-contact100-form-btn">
+                    <a href="{{url_for('postsubmit',id=id)}}">
+                    <button class="contact100-form-btn">
+                        Send Message
+                    </button></a>
+                </div>
+                <div class="container-contact100-form-btn">
+                    <button class="contact100-form-btn" onclick="history.go(-1);">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+
+            <div class="contact100-more flex-col-c-m" style="background-image: url({{url_for('static',filename='ContactFrom_v17/images/bg-01.jpg')}});">
+                <div class="flex-w size1 p-b-47">
+                    <div class="txt1 p-r-25">
+                        <span class="lnr lnr-map-marker"></span>
+                    </div>
+
+                    <div class="flex-col size2">
+                        <span class="txt1 p-b-20">
+                            Rules
+                        </span>
+
+                        <span class="txt2">
+                            Sentences should be easily understandable by the readers and any sense of grandeneur is in vain!
+                        </span>
+                    </div>
+                </div>
+
+                <div class="dis-flex size1 p-b-47">
+                    <div class="txt1 p-r-25">
+                        <span class="lnr lnr-phone-handset"></span>
+                    </div>
+
+                    <div class="flex-col size2">
+                        <span class="txt1 p-b-20">
+                            Benfits
+                        </span>
+
+                        <span class="txt3">
+                            It may help you to reflect on the life which can alter the approach towards life and also it may help you with the answer writing..
+                        </span>
+                    </div>
+                </div>
+
+                <div class="dis-flex size1 p-b-47">
+                    <div class="txt1 p-r-25">
+                        <span class="lnr lnr-envelope"></span>
+                    </div>
+
+                    <div class="flex-col size2">
+                        <span class="txt1 p-b-20">
+                            Rules
+                        </span>
+
+                        <span class="txt3">
+                            Remember not pronounce any of the conditiongs in the writings and also have no end in mind
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+    <script src="{{url_for('static',filename='ContactFrom_v17/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+<!--===============================================================================================-->
+    <script src="{{url_for('static',filename='ContactFrom_v17/vendor/animsition/js/animsition.min.js')}}"></script>
+<!--===============================================================================================-->
+    <script src="{{url_for('static',filename='ContactFrom_v17/vendor/bootstrap/js/popper.js')}}"></script>
+    <script src="{{url_for('static',filename='ContactFrom_v17/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+<!--===============================================================================================-->
+    <script src="{{url_for('static',filename='ContactFrom_v17/vendor/select2/select2.min.js')}}"></script>
+    <script>
+        $(".selection-2").select2({
+            minimumResultsForSearch: 20,
+            dropdownParent: $('#dropDownSelect1')
+        });
+    </script>
+<!--===============================================================================================-->
+    <script src="{{url_for('static',filename='ContactFrom_v17/vendor/daterangepicker/moment.min.js')}}"></script>
+    <script src="{{url_for('static',filename='ContactFrom_v17/vendor/daterangepicker/daterangepicker.js')}}"></script>
+<!--===============================================================================================-->
+    <script src="{{url_for('static',filename='ContactFrom_v17/vendor/countdowntime/countdowntime.js')}}"></script>
+<!--===============================================================================================-->
+    <script src="{{url_for('static',filename='ContactFrom_v17/js/main.js')}}"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-23581568-13');
+    </script>
+</body>
+</html>
